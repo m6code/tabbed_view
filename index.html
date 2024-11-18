@@ -2,29 +2,100 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="./javascript.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Playing with Tabs</title>
   </head>
-  <body>
-    <div id="app" class="m-4 p-10 pt-8">
-      <!--      <div>-->
-      <!-- <a href="https://vite.dev" target="_blank">
-          <img src="./vite.svg" class="logo" alt="Vite logo" />
-        </a>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-          <img src="./javascript.svg" class="logo vanilla" alt="JavaScript logo" />
-        </a>
-        <h1>Hello Vite!</h1>
-        <div class="card">
-          <button id="counter" type="button"></button>
+  <body
+    class="flex min-h-screen items-center bg-gradient-to-br from-purple-200 to-indigo-400"
+  >
+    <div class="mx-auto max-w-3xl px-8 sm:px-0">
+      <div class="sm:mx-auto sm:w-7/12">
+        <div
+          role="tablist"
+          aria-label="tabs"
+          class="shadow-900/20 relative mx-auto grid h-12 w-max grid-cols-3 items-center overflow-hidden rounded-full bg-gray-900/20 px-[3px] shadow-2xl transition"
+        >
+          <div
+            class="indicator absolute bottom-0 left-0 top-0 my-auto h-11 rounded-full bg-white shadow-md"
+          ></div>
+          <button
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-1"
+            id="tab-1"
+            tabindex="0"
+            class="tab relative block h-10 rounded-full px-6"
+          >
+            <span class="text-gray-800">First Tab</span>
+          </button>
+          <button
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-2"
+            id="tab-2"
+            tabindex="-1"
+            class="tab relative block h-10 rounded-full px-6"
+          >
+            <span class="text-gray-800">Second Tab</span>
+          </button>
+          <button
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-3"
+            id="tab-3"
+            tabindex="-1"
+            class="tab relative block h-10 rounded-full px-6"
+          >
+            <span class="text-gray-800">Third Tab</span>
+          </button>
         </div>
-        <p class="read-the-docs">
-          Click on the Vite logo to learn more
-        </p>
-      </div> -->
-      <div class="text-2xl">HEllow TAWA TailwindCSS</div>
+        <div class="relative mt-6 rounded-3xl bg-purple-50">
+          <div
+            role="tabpanel"
+            id="panel-1"
+            class="tab-panel p-6 transition duration-300"
+          >
+            <h2 class="text-xl font-semibold text-gray-800">First tab panel</h2>
+            <p class="mt-4 text-gray-600">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+              dolores voluptate temporibus, atque ab eos, delectus at ad hic
+              voluptatem veritatis iure, nulla voluptates quod nobis doloremque
+              eaque! Perferendis, soluta.
+            </p>
+          </div>
+          <div
+            role="tabpanel"
+            id="panel-2"
+            class="tab-panel invisible absolute top-0 p-6 opacity-0 transition duration-300"
+          >
+            <h2 class="text-xl font-semibold text-gray-800">
+              Second tab panel
+            </h2>
+            <p class="mt-4 text-gray-600">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+              dolores voluptate temporibus, atque ab eos, delectus at ad hic
+              voluptatem veritatis iure, nulla voluptates quod nobis doloremque
+              eaque! Perferendis, soluta.
+            </p>
+          </div>
+          <div
+            role="tabpanel"
+            id="panel-3"
+            class="tab-panel invisible absolute top-0 p-6 opacity-0 transition duration-300"
+          >
+            <h2 class="text-xl font-semibold text-gray-800">Third tab panel</h2>
+            <p class="mt-4 text-gray-600">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+              dolores voluptate temporibus, atque ab eos, delectus at ad hic
+              voluptatem veritatis iure, nulla voluptates quod nobis doloremque
+              eaque! Perferendis, soluta.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    <script type="module" src="/main.js"></script>
+
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
