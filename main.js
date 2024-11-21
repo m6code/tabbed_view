@@ -5,21 +5,13 @@ let tabs = document.querySelectorAll('.tab')
 let indicator = document.querySelector('.indicator')
 let panels = document.querySelectorAll('.tab-panel')
 
-indicator.style.width = tabs[0].getBoundingClientRect().width + 'px'
-indicator.style.left =
-  tabs[0].getBoundingClientRect().left -
-  tabs[0].parentElement.getBoundingClientRect().left +
-  'px'
+drawIndicator(tabs[0]);
 
 tabs.forEach(tab => {
   tab.addEventListener('click', () => {
     let tabTarget = tab.getAttribute('aria-controls')
 
-    indicator.style.width = tab.getBoundingClientRect().width + 'px'
-    indicator.style.left =
-      tab.getBoundingClientRect().left -
-      tab.parentElement.getBoundingClientRect().left +
-      'px'
+    drawIndicator(tab);
 
     panels.forEach(panel => {
       let panelId = panel.getAttribute('id')
@@ -32,3 +24,12 @@ tabs.forEach(tab => {
     })
   })
 })
+
+
+function drawIndicator(tabID) {
+  indicator.style.width = tabID.getBoundingClientRect().width + 'px'
+  indicator.style.left =
+      tabID.getBoundingClientRect().left -
+      tabID.parentElement.getBoundingClientRect().left +
+      'px'
+}
