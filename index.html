@@ -3,21 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./javascript.svg" />
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Playing with Tabs</title>
   </head>
-  <body
-    class="flex min-h-screen items-center bg-gradient-to-br from-purple-200 to-indigo-400"
-  >
-    <div class="mx-auto max-w-3xl px-8 sm:px-0">
-      <div class="sm:mx-auto sm:w-7/12">
+  <body class="p-10">
+    <div class="max-full mx-auto px-8 sm:px-0">
+      <div class="sm:mx-auto sm:w-full">
         <div
           role="tablist"
           aria-label="tabs"
-          class="shadow-900/20 relative mx-auto grid h-12 w-max grid-cols-3 items-center overflow-hidden rounded-full bg-gray-900/20 px-[3px] shadow-2xl transition"
+          class="shadow-900/20 relative mx-auto grid h-12 w-full max-w-[540px] grid-cols-3 items-center overflow-hidden rounded-md bg-gray-900/20 p-[8px] transition"
         >
           <div
-            class="indicator absolute bottom-0 left-0 top-0 my-auto h-11 rounded-full bg-white shadow-md"
+            class="indicator absolute bottom-0 left-0 top-0 my-auto h-11 rounded-md bg-[#000]"
           ></div>
           <button
             role="tab"
@@ -27,7 +26,7 @@
             tabindex="0"
             class="tab relative block h-10 rounded-full px-6"
           >
-            <span class="text-gray-800">First Tab</span>
+            <span class="text-white" id="panel-1-btn">First Tab</span>
           </button>
           <button
             role="tab"
@@ -37,7 +36,7 @@
             tabindex="-1"
             class="tab relative block h-10 rounded-full px-6"
           >
-            <span class="text-gray-800">Second Tab</span>
+            <span id="panel-2-btn">Second Tab</span>
           </button>
           <button
             role="tab"
@@ -47,7 +46,7 @@
             tabindex="-1"
             class="tab relative block h-10 rounded-full px-6"
           >
-            <span class="text-gray-800">Third Tab</span>
+            <span id="panel-3-btn">Third Tab</span>
           </button>
         </div>
         <div class="relative mt-6 rounded-3xl bg-purple-50">

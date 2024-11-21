@@ -94,3 +94,12 @@
 /*    background-color: #f9f9f9;*/
 /*  }*/
 /*}*/
+
+/* :root {
+    color-scheme: light dark;
+}
+
+body {
+    color: light-dark(#1d2f28,#E5D6F39d);
+    background-color: light-dark(#b0beb5,#342a2a);
+} */
